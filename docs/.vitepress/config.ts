@@ -15,6 +15,10 @@ export default defineConfig({
   ignoreDeadLinks: true,
   /*head: [['link', { rel: 'icon', href: 'https://raw.githubusercontent.com/Harmony-Within-Us/cdn/main/favicon/favicon.ico' }]],*/
   themeConfig: {
+    socialLinks: [
+      { icon : 'github', link: 'https://github.com/harmony-within-us/hrt.info/'},
+      { icon : 'discord', link: 'https://discord.gg/mgtbUuy79m'}
+    ],
    /* logo: 'https://raw.githubusercontent.com/Harmony-Within-Us/cdn/main/icon/harmony%20within%20us.svg',*/
     sidebar: [
       {
@@ -122,24 +126,17 @@ export default defineConfig({
       { text: 'Contact', link: '/contact/' },
       { text: 'Donate', link: 'https://github.com/sponsors/harmony-within-us/' },
       { text: 'Contribute', link: 'https://github.com/harmony-within-us/hrt.info/' },
-      { text: 'Translate', link: 'https://translate.hrt.info/' },
     ],
     footer: {
       message: 'Released under the CC-BY-SA-4.0 License',
       copyright: 'Copyright © 2023 Harmony Within Us'
     },
   },
+
   locales: {
     root: {
       label: 'English',
       lang: 'en'
-    },
-    fr: {
-      label: 'French',
-      lang: 'fr', // optional, will be added  as `lang` attribute on `html` tag
-      link: '/fr/' // default /fr/ -- shows on navbar translations menu, can be external
-
-      // other locale specific properties...
     },
   },
 transformHtml: (_, id, { pageData }) => {
