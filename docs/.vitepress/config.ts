@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitepress';
+import { createContentLoader, defineConfig } from 'vitepress';
 import { createWriteStream } from 'node:fs'
 import { resolve } from 'node:path'
 import { SitemapStream } from 'sitemap'
@@ -139,20 +139,19 @@ export default defineConfig({
       lang: 'en'
     },
   },
-transformHtml: (_, id, { pageData }) => {
-	if (!/[\\/]404\.html$/.test(id)) {
-		const links: { url: string; lastmod: number | undefined }[] = [];
-		links.push({ url: pageData.relativePath.replace(/((^|\/)index)?\.md$/, '$2'), lastmod: pageData.lastUpdated });
-	}
-},
   buildEnd: async ({ outDir }) => {
-    const sitemap = new SitemapStream({
-      hostname: 'https://hrt.info/'
-    })
+    const sitemap = new SitemapStream({ hostname: 'https://hrt.info/' })
+    const pages = await createContentLoader('*.md').load()
     const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
+
     sitemap.pipe(writeStream)
-    links.forEach((link) => sitemap.write(link))
+    pages.forEach((page) => sitemap.write(
+      page.url
+        .replace(/index.html$/g, '')
+        .replace(/^\/docs/, '')
+      ))
     sitemap.end()
+
     await new Promise((r) => writeStream.on('finish', r))
-  },
+  }
 });
