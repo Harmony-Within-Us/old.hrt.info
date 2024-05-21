@@ -141,13 +141,13 @@ export default defineConfig({
   },
   buildEnd: async ({ outDir }) => {
     const sitemap = new SitemapStream({ hostname: 'https://hrt.info/' })
-    const pages = await createContentLoader('*.md').load()
+    const pages = await createContentLoader(["**/*.md"]).load();
     const writeStream = createWriteStream(resolve(outDir, 'sitemap.xml'))
 
     sitemap.pipe(writeStream)
     pages.forEach((page) => sitemap.write(
       page.url
-        .replace(/index.html$/g, '')
+        .replace(/index$/g, '')
         .replace(/^\/docs/, '')
       ))
     sitemap.end()
