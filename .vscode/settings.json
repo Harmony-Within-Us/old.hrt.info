@@ -9,17 +9,6 @@
 		"**/.stackblitzrc": true,
 		"**/.svn": true,
 		"**/CVS": true,
-		"**/docs/.vitepress/config/locales": true,
-		"**/docs/.vitepress/i18n/strings": true,
-		"**/docs/de": true,
-		"**/docs/fr": true,
-		"**/docs/it": true,
-		"**/docs/ja": true,
-		"**/docs/ko": true,
-		"**/docs/nl": true,
-		"**/docs/pl": true,
-		"**/docs/ru": true,
-		"**/docs/zh": true,
 		"**/Thumbs.db": true
 	}
 }

@@ -1,4 +1,3 @@
-[![Crowdin](https://badges.crowdin.net/hrtinfo/localized.svg)](https://crowdin.com/project/hrtinfo)
 [![VitePress Deployment](https://github.com/Harmony-Within-Us/hrt.info/actions/workflows/deploy.yml/badge.svg)](https://github.com/Harmony-Within-Us/hrt.info/actions/workflows/deploy.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/22e24b52-6021-4137-9e08-ffb47d1a6b4d/deploy-status)](https://app.netlify.com/sites/harmony-within-us/deploys)
 ---
@@ -20,10 +19,6 @@ HRT.info is a platform dedicated to providing comprehensive information and reso
 Contributions to HRT.info are welcome! If you have information, resources, or updates that can benefit the community, please read our [Contribution Guidelines](CONTRIBUTING.md) before submitting a pull request.
 
 If you are not familiar with editing or coding, you can also open an issue on the [GitHub Issues](https://github.com/harmony-within-us/hrt.info/issues) page to report any suggestions or concerns.
-
-## Translation
-
-HRT.info is available in multiple languages. We use [CrowdIn](https://crowdin.com/project/hrtinfo) for translations. If you'd like to contribute to translating HRT.info, visit our [CrowdIn Project](https://translate.hrt.info).
 
 ## Disclaimer
 

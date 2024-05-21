@@ -5,12 +5,3 @@ cache
 .idea/
 docs/.vitepress/cache
 .run
-docs/de
-docs/fr
-docs/it
-docs/ja
-docs/ko
-docs/nl
-docs/pl
-docs/ru
-docs/zh

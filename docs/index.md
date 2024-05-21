@@ -28,7 +28,7 @@ features:
 HRT.info is currently in it's early state which means a lot of changes have yet to be made. If you want to accelerate our development, feel free to contribute to the GitHub repository (on your navigation bar).
 We apologise for any missing information.
 
-As of 2024/05/21 (YYYY.MM.DD), HRT.info will be updated again and content will update. Translation implementation will also be worked on. Thank you for reading.
+As of 2024/05/21 (YYYY.MM.DD), HRT.info will be updated again and content will update. Translation implementation has been deprecated. Thank you for reading.
 :::
 
 # Welcome to HRT.info
